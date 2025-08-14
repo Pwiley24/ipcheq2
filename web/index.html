@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ template "title" . }}</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ipcheq2" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+</head>
+
+<body>
+<div class="header">
+    <h1 class="logo">ipcheq<span class="logo_2">2</span></h1>
+    <form action="/ip" method="POST" class="search-form">
+        <input type="text" name="ip" placeholder="127.0.0.1" required>
+        <input type="submit" value="Go!" class="invert-dark">
+    </form>
+</div>
+
+<hr>
+<h2>Results:</h2>
+{{ template "history" . }}
+</body>
+<footer>
+    IP reputation data provided by
+    <a href="https://www.abuseipdb.com" target="_blank" rel="noopener">AbuseIPDB</a>
+    and
+    <a href="https://spur.us" target="_blank" rel="noopener">Spur.us</a>. <br>
+    &copy; 2025 Troy Lopez. All rights reserved.
+</footer>
+
+</html>
